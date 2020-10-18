@@ -1,24 +1,41 @@
 using Entidad;
 
-namespace pulsacionesdotnet.Models {
-    public class PersonaInputModel {
+namespace pulsacionesdotnet.Models
+{
+    public class PersonaInputModel
+    {
         public string Identificacion { get; set; }
         public string Nombre { get; set; }
-        public int Edad { get; set; }
-        public string Sexo { get; set; }
+        public string sexo { get; set; }
+        public int edad { get; set; }
+        public string departamento { get; set; }
+
+        public string ciudad { get; set; }
+
+        public string modalidad { get; set; }
+        public string Aporte { get; set; }
+        public string fecha { get; set; }
+
     }
 
-    public class PersonaViewModel : PersonaInputModel {
-        public PersonaViewModel () {
+    public class PersonaViewModel : PersonaInputModel
+    {
+        public PersonaViewModel()
+        {
 
         }
-        public PersonaViewModel (Persona persona) {
+        public PersonaViewModel(Persona persona)
+        {
             Identificacion = persona.Identificacion;
             Nombre = persona.Nombre;
-            Edad = persona.Edad;
-            Sexo = persona.Sexo;
-            Pulsacion = persona.Pulsacion;
+            edad = persona.edad;
+            sexo = persona.sexo;
+            departamento = persona.departamento;
+            ciudad = persona.ciudad;
+            modalidad = persona.modalidad;
+            Aporte = persona.Aporte;
+            fecha = persona.fecha;
+
         }
-        public decimal Pulsacion { get; set; }
     }
 }
